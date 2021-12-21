@@ -4,6 +4,12 @@ Monday theme is a clean and simple theme that is very suitable for blogs.
 It almost doesn't use any decoration elements while looking attractive,
 so visitors will be concentrated on your content and will not be distracted.
 
+## Screenshots
+
+![# 1](./screenshot1.png)
+
+![# 2](./screenshot2.png)
+
 ## Installation
 
 To install the monday theme, clone it 
