@@ -1,0 +1,15 @@
+{{ $currentPage := . }}
+<nav id="header">
+        {{ range .Site.Menus.main }}
+
+        <div>
+        {{ $text := print .Name | safeHTML }}
+
+        {{ if eq $currentPage.RelPermalink .URL }}<span class="active">{{$text}}</span> 
+        {{ else }}
+
+        <a  href="{{ .URL }}"> {{ $text }}</a>
+        {{end}}
+        </div>
+        {{ end }}
+</nav>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+		 <div id="container">
+        {{- partial "header.html" . -}}
+
+
+	<div class="twelve-col-grid">
+			<div class="main-body">
+					 {{- block "main" . }}{{- end }}
+			</div>
+
+			<aside class="right-nav">
+				<div class="right-nav-content">
+					<h3> Explore topics by </h3>
+					<ul>
+						<li><a href="/categories/"> Categories </a></li>
+						<li><a href="/tags/"> Tags </a></li>
+					</ul>
+
+
+					<!-- end tax test -->
+					<!-- Featured posts -->
+					<h3>Featured Posts</h3>
+						<ul>
+						{{ range  (where .Site.Pages ".Params.featured" "=" true) }}
+						  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+						  </li>
+					  {{ end }}
+					</ul>
+
+					<!-- End of featured posts -->
+
+					<!-- Start of Intro -->
+					{{ if .Site.Params.introTitle }}
+					<h3> {{ .Site.Params.introTitle | .RenderString }}  </h3>
+					{{ end }}
+
+					{{ if .Site.Params.introBody }}
+					<p> {{ .Site.Params.introBody | .RenderString }} </p>
+					{{ end }}
+					
+					
+
+
+				</div>
+			</aside>
+
+</div>
+
+        <!--{{- partial "footer.html" . -}} -->
+
+		</div>
+    </body>
+</html>
+
+

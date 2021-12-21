@@ -1,0 +1,14 @@
+{{ define "main" }}
+        
+	<h1 class="top2">{{ .Title }}</h1>
+
+	{{ .Content }}
+
+	{{ range where .Paginator.Pages.ByPublishDate.Reverse "Params.hidden" "ne" "true" }}
+	{{ partial "postpreview.html" . }}
+{{ end }}
+
+	{{ partial "pagination.html" .}}
+{{ end }}
+
+

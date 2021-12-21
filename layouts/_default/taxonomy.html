@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<!--<a href="/categories/">Back to categories</a> -->
+
+            <h2 class="top2">Category: {{ .Title }}</h2>
+
+
+
+            {{ range .Paginator.Pages }}
+            	{{ partial "postpreview.html" . }}
+           	{{ end }}
+
+{{ end }}
+

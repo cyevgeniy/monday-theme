@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<ul>
+ {{ range .Data.Terms.ByCount }}
+
+<li>
+ {{ $pageCount := len .Pages }}
+ <a  href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>({{ $pageCount }})
+</li>
+
+    {{ end }}
+</ul>
+{{ end }}

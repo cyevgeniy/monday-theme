@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+
+<h1 class="top2">{{ .Title }} </h1>
+
+{{ .Content}}
+
+<h2> Most recent blog posts: </h2>
+
+{{ range first 5 (where (where .Site.RegularPages.ByPublishDate.Reverse "Params.hidden" "ne" "true") "Section" "posts")  }}
+	{{ partial "postpreview.html" . }}
+{{ end }}
+
+{{ end }}
