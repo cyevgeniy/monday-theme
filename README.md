@@ -6,7 +6,11 @@ so visitors will be concentrated on your content and will not be distracted.
 
 ## Screenshots
 
+№1:
+
 ![# 1](./screenshot1.png)
+
+№2:
 
 ![# 2](./screenshot2.png)
 
