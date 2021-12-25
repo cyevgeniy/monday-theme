@@ -85,3 +85,8 @@ use `featured_image` param:
 Title: "Some blog post"
 featured_image: "/img/subdir/img.png"
 ---
+
+## Todo
+
+- [ ] Add footer
+- [ ] Publish to hugo themes
