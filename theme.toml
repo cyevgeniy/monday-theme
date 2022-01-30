@@ -4,11 +4,20 @@
 name = "Monday theme"
 license = "MIT"
 licenselink = "https://github.com/cyevgeniy/monday-theme/blob/master/LICENSE"
-description = ""
+description = "Clean theme designed for personal blogs"
 homepage = "https://github.com/cyevgeniy/monday-theme"
-tags = []
-features = []
-min_version = "0.41.0"
+
+tags = [
+    "blog", 
+    "personal",
+    "minimal", 
+    "clean",
+    "simple", 
+    "light",
+    "fast",
+]
+
+features = ["blog", "featured-posts"]
 
 [author]
   name = "Yevgeniy Chaban"
