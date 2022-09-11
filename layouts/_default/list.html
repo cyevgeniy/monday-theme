@@ -2,7 +2,11 @@
         
 	<h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
 
+	{{ if .Content}}
+	<div class="mb-5">
 	{{ .Content }}
+	</div>
+	{{ end }}
 
 	{{ range where .Paginator.Pages.ByPublishDate.Reverse "Params.hidden" "ne" "true" }}
 	{{ partial "postpreview.html" . }}
