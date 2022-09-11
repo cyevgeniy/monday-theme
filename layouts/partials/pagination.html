@@ -1,10 +1,9 @@
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 }}
-<nav class="pagination">
-<ul class="pagination-list">
-    <li>
-        <a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}{{ end }}" class="pagination-link" {{ if not $pag.HasPrev }} disabled{{ end }} aria-label="Previous"><span aria-hidden="true">&laquo;Previous</span></a>
-    </li>
+<nav class="flex flex-row gap-4 justify-center text-lg ">
+    <div>
+        <a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}{{ end }}" class="{{ if not $pag.HasPrev }} disabled{{ end }} text-cyan-900" aria-label="Previous"><span aria-hidden="true">&laquo;Previous</span></a>
+    </div>
     {{ $ellipsed := false }}
     {{ $shouldEllipse := false }}
     {{ range $pag.Pagers }}
@@ -19,14 +18,13 @@
         {{ $ellipsed = true }}
     {{ end }}
     {{ if $showNumber }}
-    <li><a class="pagination-link {{ if eq . $pag }}is-current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+    <div><a class="{{ if eq . $pag }}text-black {{ end }} text-cyan-900" href="{{ .URL }}">{{ .PageNumber }}</a></div>
     {{ else if $shouldEllipse }}
-    <li class="pagination-link" disabled><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></li>
+    <div><span aria-hidden="true">&nbsp;&hellip;&nbsp;</span></div>
     {{ end }}
     {{ end }}
-    <li>
-    <a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}{{ end }}" class="pagination-link" {{ if not $pag.HasNext }}disabled{{ end }} aria-label="Next"><span aria-hidden="true">Next&raquo;</span></a>
-    </li>
-</ul>
+    <div>
+    <a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}{{ end }}" class="text-cyan-900 {{ if not $pag.HasNext }}text-black{{ end }}" aria-label="Next"><span aria-hidden="true">Next&raquo;</span></a>
+    </div>
 </nav>
 {{ end }}
