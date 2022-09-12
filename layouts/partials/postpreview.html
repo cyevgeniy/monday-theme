@@ -1,17 +1,21 @@
-<div class="mb-5">
-<section>
+<div class="mb-7 ">
 
+		
+<div class="grid grid-cols-12 gap-2">
+		<div class="{{ if .Params.featured_image }} col-span-12 lg:col-span-8 {{else}} col-span-12 {{end}}">
 		<h2 class="text-xl font-medium"><a href="{{ .RelPermalink }}" class="text-cyan-900 hover:underline">{{ .Title }}</a></h2>
-		{{ partial "metadata.html" . }}
-
+		{{ partial "metadata.html" . }}	
+		<p>{{ .Summary }}</p>
+	</div>
 
 
 		{{ if .Params.featured_image }}
+			<div class="invisible lg:col-span-4 lg:visible">
 			<a href="{{ .RelPermalink }}" class="block mb-2">
 			<img class="img-header" src="{{ .Params.featured_image }}"/>
 			</a>
+			</div>
 		{{ end }}
-
-		<p>{{ .Summary }}</p>
-	</section>
+	</div>
+		
 </div>

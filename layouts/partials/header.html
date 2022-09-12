@@ -1,11 +1,11 @@
 {{ $currentPage := . }}
 
-<div class="py-6 pl-8 mb-5">
+<div class="py-6 pl-4 lg:pl-8 mb-5">
 <a href="/" class="text-5xl block mb-6">Ychbn blog </a>
 <span class="text-xl"> Best fucking website on the planet </span>
 </div>
 
-<nav class="flex flex-row gap-8 pl-8">
+<nav class="flex flex-row gap-8 pl-4 lg:pl-8">
         {{ range .Site.Menus.main }}
 
                 {{ $text := print .Name | safeHTML }}

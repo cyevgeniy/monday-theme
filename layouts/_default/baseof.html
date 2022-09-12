@@ -2,16 +2,16 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-		 <div id="container">
+		 <div class="max-w-screen-xl">
         {{- partial "header.html" . -}}
 
 
-	<div class="grid grid-cols-12 gap-4 mx-8 mt-10">
-			<div class="col-span-8">
+	<div class="grid grid-cols-12 gap-4 mx-4 lg:mx-8 mt-10">
+			<div class="col-span-12 lg:col-span-8">
 					 {{- block "main" . }}{{- end }}
 			</div>
 
-			<aside class="col-span-4">
+			<aside class="lg:col-span-4 col-span-12">
 					<h3 class="text-lg mb-2 text-black font-medium "> Explore topics by </h3>
 					<ul class="text-cyan-900">
 						<li><a href="/categories/" class="hover:underline"> Categories </a></li>
@@ -47,9 +47,10 @@
 
 </div>
 
-        {{- partial "footer.html" . -}} 
+        
 
 		</div>
+		{{- partial "footer.html" . -}} 
     </body>
 </html>
 
