@@ -1,10 +1,5 @@
 {{ define "main" }}
-
-<!--<a href="/categories/">Back to categories</a> -->
-
-            <h1 class="text-3xl font-bold mb-8">Category: {{ .Title }}</h2>
-
-
+            <h1 class="text-3xl font-bold mb-8d">Category: {{ .Title }}</h2>
 
             {{ range .Paginator.Pages }}
             	{{ partial "postpreview.html" . }}
