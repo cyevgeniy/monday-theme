@@ -1,7 +1,7 @@
 <div class="mb-7 ">
 
 		
-<div class="grid grid-cols-12 gap-2">
+<div class="grid grid-cols-12 gap-4">
 		<div class="{{ if .Params.featured_image }} col-span-12 lg:col-span-8 {{else}} col-span-12 {{end}}">
 		<h2 class="text-xl font-medium"><a href="{{ .RelPermalink }}" class="text-cyan-900 hover:underline">{{ .Title }}</a></h2>
 		{{ partial "metadata.html" . }}	
@@ -10,9 +10,9 @@
 
 
 		{{ if .Params.featured_image }}
-			<div class="invisible lg:col-span-4 lg:visible">
+			<div class="hidden lg:block lg:col-span-4">
 			<a href="{{ .RelPermalink }}" class="block mb-2">
-			<img class="img-header" src="{{ .Params.featured_image }}"/>
+			<img class="w-full" src="{{ .Params.featured_image }}"/>
 			</a>
 			</div>
 		{{ end }}
