@@ -19,6 +19,7 @@ paginate=5
     weight = 3
 
 [params]
+  author = "Mr. John Doe"
   siteDescription = "Best site in the world"
   introTitle="Introduction"
   introBody = """Hello, this is my blog and my introduction message. Put
