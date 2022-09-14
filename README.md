@@ -6,7 +6,7 @@ so visitors will be concentrated on your content and will not be distracted.
 
 ## Screenshots
 
-![# 1](images/tn.png)
+![# 1](https://github.com/cyevgeniy/monday-theme/blob/master/images/tn.png)
 
 ## Installation
 
